@@ -4,6 +4,7 @@
 #include "cell.cpp"
 #include <string>
 
+//возвр n * n (opperator)
 class RandomCellGenerator {
 public:
 

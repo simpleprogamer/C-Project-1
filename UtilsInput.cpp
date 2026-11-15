@@ -6,7 +6,6 @@
 
 namespace input_utils
 {
-
     template <typename Predicate>
     long long readValidatedLongLong(std::istream& in, std::ostream& out,
         const std::string& prompt,

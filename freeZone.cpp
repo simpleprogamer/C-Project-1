@@ -12,7 +12,7 @@ namespace free_zone {
         double median = 0.0;
     };
 
-
+    // для подсчёта свободной зоны
     inline void freeZoneSize(std::vector<std::vector<bool>>& blocked, const Cell& c) {
         const int n = static_cast<int>(blocked.size());
         for (int dr = -1; dr <= 1; ++dr) {
