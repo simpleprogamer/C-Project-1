@@ -38,6 +38,6 @@ namespace input_utils
         const std::string& prompt) {
         return readValidatedLongLong(in, out, prompt, "Error: the number cant be a negative one",
             [](long long v) { return v >= 0; });
-    }//
+    }
 }
 
