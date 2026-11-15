@@ -18,7 +18,7 @@ namespace input_utils
             if (!(in >> value)) {
                 in.clear();
                 in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                out << "Помилка: очікувалось ціле число. Спробуйте ще раз.\n";
+                 out << "Error: the number must an whole number\n";
                 continue;
             }
             if (!predicate(value)) {
@@ -31,13 +31,13 @@ namespace input_utils
 
     inline int readPositiveInt(std::istream& in, std::ostream& out, const std::string& prompt) {
         return static_cast<int>(readValidatedLongLong(
-            in, out, prompt, "Помилка: число має бути додатним.",
+            in, out, prompt, "Error: the number must be a positive one ",
             [](long long v) { return v > 0; }));
     }
 
     inline long long readNonNegativeLongLong(std::istream& in, std::ostream& out,
         const std::string& prompt) {
-        return readValidatedLongLong(in, out, prompt, "Помилка: число не може бути від'ємним.",
+        return readValidatedLongLong(in, out, prompt, "Error: the number cant be a negative one",
             [](long long v) { return v >= 0; });
     }
 }
